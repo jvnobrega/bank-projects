@@ -21,7 +21,7 @@
       <module name="account.cmd" options="-parameters" />
       <module name="account.common" options="-parameters" />
       <module name="account.query" options="-parameters" />
-      <module name="cqrs.core" options="" />
+      <module name="cqrs.core" options="-parameters" />
       <module name="query" options="-parameters" />
     </option>
   </component>
