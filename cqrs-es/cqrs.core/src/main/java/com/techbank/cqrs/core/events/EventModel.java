@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class EventModel {
     @Id
     private String id;
-    private LocalDateTime localDateTime;
+    private LocalDateTime inputDate;
     private String aggregateIdentifier;
     private String aggregateType;
     private int version;
