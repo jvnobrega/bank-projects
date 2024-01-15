@@ -7,6 +7,7 @@ import com.techbank.cqrs.core.events.EventModel;
 import com.techbank.cqrs.core.exceptions.AggregateNotFoundException;
 import com.techbank.cqrs.core.exceptions.ConcurrencyException;
 import com.techbank.cqrs.core.infrastructure.EventStore;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -15,13 +16,10 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class AccountEventStore implements EventStore {
 
     private final EventStoreRepository eventStoreRepository;
-
-    public AccountEventStore(EventStoreRepository eventStoreRepository) {
-        this.eventStoreRepository = eventStoreRepository;
-    }
 
     @Override
     public void saveEvent(String aggregateId, List<BaseEvent> events, int expectedVersion) {
