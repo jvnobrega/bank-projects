@@ -6,7 +6,5 @@ import lombok.*;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
-@AllArgsConstructor
-@NoArgsConstructor
 public class FindAllAccountsQuery extends BaseQuery {
 }
