@@ -23,7 +23,7 @@ public class CommandApplication {
 	@PostConstruct
 	public void registerHandlers() {
 		commandDispatcher.registerHandler(OpenAccountCommand.class, commandHandler::handle);
-		commandDispatcher.registerHandler(DepositCommand.class, commandHandler::handle);
+		commandDispatcher.registerHandler(DepositFundsCommand.class, commandHandler::handle);
 		commandDispatcher.registerHandler(WithdrawFundsCommand.class, commandHandler::handle);
 		commandDispatcher.registerHandler(CloseAccountCommand.class, commandHandler::handle);
 	}

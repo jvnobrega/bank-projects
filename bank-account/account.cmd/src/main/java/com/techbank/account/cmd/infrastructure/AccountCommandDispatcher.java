@@ -5,7 +5,11 @@ import com.techbank.cqrs.core.commands.CommandHandlerMethod;
 import com.techbank.cqrs.core.infrastructure.CommandDispatcher;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.springframework.util.CollectionUtils.isEmpty;
 
 @Service
 public class AccountCommandDispatcher implements CommandDispatcher {
@@ -20,7 +24,7 @@ public class AccountCommandDispatcher implements CommandDispatcher {
     @Override
     public void send(BaseCommand command) {
         var handlers = routes.get(command.getClass());
-        if (handlers == null || handlers.isEmpty()) {
+        if (isEmpty(handlers)) {
             throw new RuntimeException("No command handler was registered");
         }
         if (handlers.size() > 1) {

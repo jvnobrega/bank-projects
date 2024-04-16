@@ -13,10 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
-
-import static java.util.Objects.nonNull;
 
 @Service
 @RequiredArgsConstructor

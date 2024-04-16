@@ -8,6 +8,6 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = false)
 @Getter
 @Setter
-public class DepositCommand extends BaseCommand {
+public class DepositFundsCommand extends BaseCommand {
     private double amount;
 }

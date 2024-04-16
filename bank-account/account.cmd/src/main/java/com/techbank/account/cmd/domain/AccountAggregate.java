@@ -6,6 +6,7 @@ import com.techbank.account.common.events.AccountOpenedEvent;
 import com.techbank.account.common.events.FundsDepositedEvent;
 import com.techbank.account.common.events.FundsWithdrawnEvent;
 import com.techbank.cqrs.core.domain.AggregateRoot;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -13,11 +14,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class AccountAggregate extends AggregateRoot {
     private Boolean active;
+    @Getter
     private double balance;
-
-    public double getBalance() {
-        return balance;
-    }
 
     public AccountAggregate(OpenAccountCommand command) {
         raiseEvent(AccountOpenedEvent.builder()
