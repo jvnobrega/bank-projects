@@ -8,6 +8,6 @@ import lombok.*;
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class FindAllAccountsByHolderQuery extends BaseQuery {
+public class FindAllAccountByHolderQuery extends BaseQuery {
     private String accountHolder;
 }
